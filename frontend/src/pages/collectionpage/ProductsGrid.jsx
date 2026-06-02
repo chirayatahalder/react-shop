@@ -1,34 +1,38 @@
 import ProductCard from "../../components/ProductCard";
 import { useSearchParams } from "react-router";
-import { useEffect, useState } from "react";
+import { useState, useMemo } from "react";
 
 export default function ProductsGrid({ products }) {
+  const [filterValue, setFilterValue] = useState("all");
   const [searchParams] = useSearchParams();
-  const [filteredProducts, setFilteredProducts] = useState(products);
-
   const category = searchParams.get("category");
 
-  if(category) {
-    useEffect(() => {
-      const filtered = products.filter(
-        (product) => product.category.toLowerCase() === category.toLowerCase()
-      );
-      setFilteredProducts(filtered);
-
-    }, [category, products]);
-  }
   
-
-
-
+  const categorizedProducts = category
+  ? products.filter((p) => p.category.toLowerCase() === category)
+  : products;
+  
+  const displayProducts = useMemo(() => {
+    if (filterValue === "featured") {
+      return categorizedProducts.filter((p) => p.featured);
+    } else if (filterValue === "newest") {
+      return categorizedProducts.filter((p) => p.badge === "New Arrival");
+    } else if (filterValue === "price-low-to-high") {
+      return [...categorizedProducts].sort((a, b) => a.price - b.price);
+    } else if (filterValue === "price-high-to-low") {
+      return [...categorizedProducts].sort((a, b) => b.price - a.price);
+    } else {
+      return categorizedProducts;
+    }
+  }, [filterValue, categorizedProducts]);
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-10">
+    <section className="max-w-7xl mx-auto py-10">
       {/* Toolbar */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
         <div>
           <h2 className="text-lg font-semibold">
-            {filteredProducts.length} Products
+            {displayProducts.length} Products
           </h2>
         </div>
 
@@ -39,7 +43,9 @@ export default function ProductsGrid({ products }) {
 
           <select
             className="px-4 py-2 border rounded-lg bg-white"
-            // onChange={(e) => onChangeHandler(e)}
+            onChange={(e) => {
+              setFilterValue(e.target.value);
+            }} value={filterValue}
           >
             <option value="all">All</option>
             <option value="featured">Featured</option>
@@ -52,7 +58,7 @@ export default function ProductsGrid({ products }) {
 
       {/* Products */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        {filteredProducts.map((product) => (
+        {displayProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>

@@ -70,7 +70,7 @@ export default function ProductCard({ product }) {
         {/* Price */}
         <div className="flex items-center gap-2 mt-4">
           <span className="text-xl font-bold text-gray-900">
-            ${product.price.toFixed(2)}
+            ${product.price}
           </span>
 
           <span className="text-sm text-gray-400 line-through">

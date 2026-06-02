@@ -27,7 +27,7 @@ export default function categories() {
         </NavLink>
 
         <NavLink
-          to="/collection?category=Footwear"
+          to="/collection?category=footwear"
           className="border rounded-xl p-10 text-center hover:shadow-md transition"
         >
           <h3 className="text-xl font-semibold">Footwear</h3>
