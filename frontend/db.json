@@ -1,0 +1,163 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Premium Oversized Tee",
+      "category": "Men's Collection",
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800",
+      "price": 29.99,
+      "originalPrice": 39.99,
+      "rating": 5,
+      "reviewCount": 124,
+      "badge": "New Arrival",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": 2,
+      "title": "Classic Black Hoodie",
+      "category": "Men's Collection",
+      "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7",
+      "price": 49.99,
+      "originalPrice": 59.99,
+      "rating": 4,
+      "reviewCount": 87,
+      "badge": "Best Seller",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": 3,
+      "title": "Slim Fit Chino Pants",
+      "category": "Men's Collection",
+      "image": "https://images.unsplash.com/photo-1506629905607-d9c297d7d4e5?w=800",
+      "price": 44.99,
+      "originalPrice": 54.99,
+      "rating": 4,
+      "reviewCount": 65,
+      "badge": "Trending",
+      "featured": false,
+      "inStock": true
+    },
+
+    {
+      "id": 4,
+      "title": "Relaxed Cotton Dress",
+      "category": "Women's Collection",
+      "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800",
+      "price": 59.99,
+      "originalPrice": 74.99,
+      "rating": 5,
+      "reviewCount": 146,
+      "badge": "New Arrival",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": 5,
+      "title": "Floral Summer Top",
+      "category": "Women's Collection",
+      "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800",
+      "price": 34.99,
+      "originalPrice": 44.99,
+      "rating": 4,
+      "reviewCount": 91,
+      "badge": "Popular",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": 6,
+      "title": "High-Waist Wide Leg Jeans",
+      "category": "Women's Collection",
+      "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800",
+      "price": 54.99,
+      "originalPrice": 69.99,
+      "rating": 5,
+      "reviewCount": 173,
+      "badge": "Best Seller",
+      "featured": false,
+      "inStock": true
+    },
+
+    {
+      "id": 7,
+      "title": "Minimal White Sneakers",
+      "category": "Footwear",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+      "price": 79.99,
+      "originalPrice": 99.99,
+      "rating": 5,
+      "reviewCount": 201,
+      "badge": "Trending",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": 8,
+      "title": "Running Performance Shoes",
+      "category": "Footwear",
+      "image": "https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=800",
+      "price": 89.99,
+      "originalPrice": 109.99,
+      "rating": 4,
+      "reviewCount": 119,
+      "badge": "Sport",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": 9,
+      "title": "Classic Leather Loafers",
+      "category": "Footwear",
+      "image": "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=800",
+      "price": 69.99,
+      "originalPrice": 84.99,
+      "rating": 4,
+      "reviewCount": 74,
+      "badge": "Limited",
+      "featured": false,
+      "inStock": true
+    },
+
+    {
+      "id": 10,
+      "title": "Essential Joggers",
+      "category": "Athleisure",
+      "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800",
+      "price": 39.99,
+      "originalPrice": 49.99,
+      "rating": 4,
+      "reviewCount": 72,
+      "badge": "Sale",
+      "featured": false,
+      "inStock": true
+    },
+    {
+      "id": 11,
+      "title": "Training Zip Hoodie",
+      "category": "Athleisure",
+      "image": "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=800",
+      "price": 59.99,
+      "originalPrice": 74.99,
+      "rating": 5,
+      "reviewCount": 112,
+      "badge": "Popular",
+      "featured": true,
+      "inStock": true
+    },
+    {
+      "id": 12,
+      "title": "Performance Active Tee",
+      "category": "Athleisure",
+      "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800",
+      "price": 29.99,
+      "originalPrice": 39.99,
+      "rating": 4,
+      "reviewCount": 58,
+      "badge": "New Arrival",
+      "featured": false,
+      "inStock": true
+    }
+  ]
+}
