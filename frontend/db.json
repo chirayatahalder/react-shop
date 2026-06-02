@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Premium Oversized Tee",
-      "category": "Men's Collection",
+      "category": "Men",
       "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800",
       "price": 29.99,
       "originalPrice": 39.99,
@@ -16,7 +16,7 @@
     {
       "id": 2,
       "title": "Classic Black Hoodie",
-      "category": "Men's Collection",
+      "category": "Men",
       "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7",
       "price": 49.99,
       "originalPrice": 59.99,
@@ -29,8 +29,8 @@
     {
       "id": 3,
       "title": "Slim Fit Chino Pants",
-      "category": "Men's Collection",
-      "image": "https://images.unsplash.com/photo-1506629905607-d9c297d7d4e5?w=800",
+      "category": "Men",
+      "image": "https://images.unsplash.com/photo-1549369130-1f99f678dc12?w=800",
       "price": 44.99,
       "originalPrice": 54.99,
       "rating": 4,
@@ -43,7 +43,7 @@
     {
       "id": 4,
       "title": "Relaxed Cotton Dress",
-      "category": "Women's Collection",
+      "category": "Women",
       "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800",
       "price": 59.99,
       "originalPrice": 74.99,
@@ -56,7 +56,7 @@
     {
       "id": 5,
       "title": "Floral Summer Top",
-      "category": "Women's Collection",
+      "category": "Women",
       "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800",
       "price": 34.99,
       "originalPrice": 44.99,
@@ -69,7 +69,7 @@
     {
       "id": 6,
       "title": "High-Waist Wide Leg Jeans",
-      "category": "Women's Collection",
+      "category": "Women",
       "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800",
       "price": 54.99,
       "originalPrice": 69.99,

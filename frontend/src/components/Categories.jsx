@@ -7,7 +7,7 @@ export default function categories() {
 
       <div className="grid md:grid-cols-3 gap-6">
         <NavLink
-          to="/category/men"
+          to="/collection?category=men"
           className="border rounded-xl p-10 text-center hover:shadow-md transition"
         >
           <h3 className="text-xl font-semibold">Men</h3>
@@ -17,7 +17,7 @@ export default function categories() {
         </NavLink>
 
         <NavLink
-          to="/category/women"
+          to="/collection?category=women"
           className="border rounded-xl p-10 text-center hover:shadow-md transition"
         >
           <h3 className="text-xl font-semibold">Women</h3>
@@ -27,10 +27,10 @@ export default function categories() {
         </NavLink>
 
         <NavLink
-          to="/category/accessories"
+          to="/collection?category=Footwear"
           className="border rounded-xl p-10 text-center hover:shadow-md transition"
         >
-          <h3 className="text-xl font-semibold">Accessories</h3>
+          <h3 className="text-xl font-semibold">Footwear</h3>
           <p className="mt-2 text-gray-600">
             Complete your look with essentials.
           </p>
