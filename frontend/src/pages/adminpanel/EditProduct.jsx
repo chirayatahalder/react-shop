@@ -44,7 +44,7 @@ export default function EditProduct() {
     <div className="max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-3xl font-bold">Create Product</h1>
+          <h1 className="text-3xl font-bold">Edit Product</h1>
           <p className="text-sm text-slate-500">
             Complete the product details to match the store schema.
           </p>
