@@ -6,6 +6,8 @@ import NotFoundPage from "../pages/notfoundpage/NotFoundPage";
 import AdminPanel from "../pages/adminpanel/AdminPanel";
 import CreateProduct from "../pages/adminpanel/CreateProduct";
 import EditProduct from "../pages/adminpanel/EditProduct";
+import CartPage from "../pages/cartpage/CartPage";
+import WishListPage from "../pages/wishlistpage/WishListPage";
 
 export default function AppRouter({ products }) {
   return (
@@ -16,6 +18,8 @@ export default function AppRouter({ products }) {
           path="/collection"
           element={<CollectionPage products={products} />}
         />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/wishlist" element={<WishListPage />} />
         <Route path="/*" element={<NotFoundPage />} />
       </Route>
       <Route path="/admin" element={<AdminPanel />} />

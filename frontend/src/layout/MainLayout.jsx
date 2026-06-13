@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Outlet } from "react-router";
+import { ToastContainer } from "react-toastify";
 
 const MainLayout = () => {
   return (
@@ -10,6 +11,7 @@ const MainLayout = () => {
         <Outlet />
       </main>
       <Footer />
+      <ToastContainer position="bottom-left" autoClose={3000} limit={3} />
     </>
   );
 };

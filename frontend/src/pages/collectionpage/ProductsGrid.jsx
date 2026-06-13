@@ -7,11 +7,10 @@ export default function ProductsGrid({ products }) {
   const [searchParams] = useSearchParams();
   const category = searchParams.get("category");
 
-  
   const categorizedProducts = category
-  ? products.filter((p) => p.category.toLowerCase() === category)
-  : products;
-  
+    ? products.filter((p) => p.category.toLowerCase() === category)
+    : products;
+
   const displayProducts = useMemo(() => {
     if (filterValue === "featured") {
       return categorizedProducts.filter((p) => p.featured);
@@ -45,7 +44,8 @@ export default function ProductsGrid({ products }) {
             className="px-4 py-2 border rounded-lg bg-white"
             onChange={(e) => {
               setFilterValue(e.target.value);
-            }} value={filterValue}
+            }}
+            value={filterValue}
           >
             <option value="all">All</option>
             <option value="featured">Featured</option>

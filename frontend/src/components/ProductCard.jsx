@@ -1,8 +1,15 @@
+import { useDispatch, useSelector } from "react-redux";
 import renderStars from "../utils/renderStars";
+import { addToCart } from "../store/slices/cartSlice";
+import { toggleItem } from "../store/slices/wishListSlice";
+import { toast } from "react-toastify";
 
 export default function ProductCard({ product }) {
+  const dispatch = useDispatch();
+  const wishList = useSelector((state) => state.wishlist);
 
-  // console.log("Rendering ProductCard for:", product);
+  const isWishListEd = wishList.some((u) => u.id === product.id);
+
   return (
     <div className="group bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       {/* Image */}
@@ -17,16 +24,21 @@ export default function ProductCard({ product }) {
 
         {/* Wishlist */}
         <button
-          className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:scale-110 transition"
+          className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center hover:scale-110 transition"
           aria-label="Add to Wishlist"
+          onClick={() => {
+            dispatch(toggleItem(product));
+          }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
+            fill={isWishListEd ? "red" : "none"}
             viewBox="0 0 24 24"
             strokeWidth={2}
             stroke="currentColor"
-            className="w-5 h-5"
+            stroke={isWishListEd ? "red" : "currentColor"}
+            className="w-8 h-8"
           >
             <path
               strokeLinecap="round"
@@ -37,7 +49,7 @@ export default function ProductCard({ product }) {
         </button>
 
         {/* Badge */}
-        <span className="absolute top-4 left-4 bg-black text-white text-xs font-medium px-3 py-1 rounded-full">
+        <span className="absolute top-4 left-4 bg-black text-white text-sm font-medium px-3 py-1 rounded-full">
           {product.badge || "New"}
         </span>
       </div>
@@ -79,7 +91,13 @@ export default function ProductCard({ product }) {
         </div>
 
         {/* CTA */}
-        <button className="w-full mt-5 py-3 border border-black rounded-xl font-medium hover:bg-black hover:text-white transition">
+        <button
+          className="w-full mt-5 py-3 border border-black rounded-xl font-medium hover:bg-black hover:text-white transition"
+          onClick={() => {
+            toast.success("🛒 Added to cart!");
+            dispatch(addToCart(product));
+          }}
+        >
           Add to Cart
         </button>
       </div>
